@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Take-1.sln"
+    "dotnet.defaultSolution": "Unity-3dlearn.sln"
 }
