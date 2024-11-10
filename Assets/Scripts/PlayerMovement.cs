@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
   private Rigidbody rb;
 
   [SerializeField]
+  private Transform headTransform;
+
+  [SerializeField]
   private float speed = 2f;
 
   [SerializeField]
@@ -16,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
   void FixedUpdate()
   {
-    Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y; // Transform.right is zegmaar rotation van gameobject naar vector geconvert zodat je het keer iets kan doen en hetzelfde met forward.
+    Vector3 move = transform.right * moveInput.x + headTransform.forward * moveInput.y; // Transform.right is zegmaar rotation van gameobject naar vector geconvert zodat je het keer iets kan doen en hetzelfde met forward.
     rb.AddForce(move.normalized * speed, ForceMode.VelocityChange);
   }
 
